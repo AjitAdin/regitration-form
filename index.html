@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+      .hidden {
+        display: none;
+      }
+      .container {
+        max-width: 500px;
+        margin: 50px auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+      }
+      .success-container {
+        background-color: #e6ffe6;
+        border: 1px solid #28a745;
+        padding: 15px;
+        border-radius: 10px;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Registration Form</h1>
+      <form id="registrationForm">
+        <label for="name">Full Name</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Enter your full name"
+          required
+        />
+
+        <label for="email">Email</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Enter your email"
+          required
+        />
+
+        <label for="phone">Phone Number</label>
+        <input
+          type="text"
+          id="phone"
+          name="phone"
+          placeholder="Enter your phone number"
+          required
+        />
+
+        <label for="message">Message</label>
+        <textarea
+          id="message"
+          name="message"
+          rows="4"
+          placeholder="Enter a message (optional)"
+        ></textarea>
+
+        <button type="submit">Submit</button>
+      </form>
+
+      <!-- Success Message -->
+      <div id="successMessage" class="success-container hidden">
+        <h2>Submission Successful</h2>
+        <p><strong>Name:</strong> <span id="displayName"></span></p>
+        <p><strong>Email:</strong> <span id="displayEmail"></span></p>
+        <p><strong>Phone:</strong> <span id="displayPhone"></span></p>
+        <p><strong>Message:</strong> <span id="displayMessage"></span></p>
+      </div>
+    </div>
+
+    <script>
+      // JavaScript for form handling
+      document
+        .getElementById("registrationForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault(); // Prevent the form from reloading the page
+
+          // Get form data
+          const name = document.getElementById("name").value.trim();
+          const email = document.getElementById("email").value.trim();
+          const phone = document.getElementById("phone").value.trim();
+          const message = document.getElementById("message").value.trim();
+
+          // Display the success message
+          document.getElementById("displayName").textContent = name;
+          document.getElementById("displayEmail").textContent = email;
+          document.getElementById("displayPhone").textContent = phone;
+          document.getElementById("displayMessage").textContent =
+            message || "None";
+
+          // Show the success message container
+          document.getElementById("successMessage").classList.remove("hidden");
+
+          // Clear the form fields
+          document.getElementById("registrationForm").reset();
+        });
+    </script>
+  </body>
+</html>

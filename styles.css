@@ -1,0 +1,100 @@
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Style */
+body {
+    background-color: #333333; /* Dark background */
+    color: #f4f4f4; /* Off-white text color */
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-size: 18px; /* Increase base font size */
+    line-height: 1.6;
+}
+
+/* Container */
+.container {
+    background-color: #444444; /* Darker grey for the container */
+    padding: 50px 40px; /* Increased padding */
+    border-radius: 20px; /* Larger rounded corners */
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2); /* Stronger shadow for depth */
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+    transition: box-shadow 0.3s ease;
+}
+
+/* Heading Style */
+h1 {
+    font-size: 42px; /* Increased heading size */
+    color: #e63946; /* Red heading color */
+    margin-bottom: 40px;
+    font-weight: 700;
+    letter-spacing: 2px; /* Added letter-spacing */
+}
+
+/* Label Style */
+label {
+    font-size: 18px; /* Larger label size */
+    color: #f1faee; /* Light grey label color */
+    font-weight: bold;
+    text-align: left;
+    display: block;
+    margin-bottom: 10px;
+    text-transform: uppercase; /* Added uppercase transformation */
+}
+
+/* Input and Textarea Styles */
+input, textarea {
+    width: 100%;
+    padding: 16px; /* Increased padding */
+    margin-bottom: 25px; /* Increased margin */
+    border: 2px solid #e63946; /* Red border */
+    border-radius: 10px; /* Larger rounded corners */
+    background-color: #555555; /* Darker background for inputs */
+    font-size: 16px; /* Slightly larger font */
+    color: #f4f4f4;
+    transition: border-color 0.3s ease;
+}
+
+input:focus, textarea:focus {
+    border-color: #f1faee; /* Light color on focus */
+    outline: none;
+}
+
+/* Button Styles */
+button {
+    background-color: #e63946; /* Red background */
+    color: #f4f4f4; /* Light text */
+    padding: 16px 30px; /* Increased padding */
+    border-radius: 10px;
+    font-size: 18px; /* Larger button text */
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease;
+    font-weight: bold; /* Bold button text */
+}
+
+button:hover {
+    background-color: #d62c1a; /* Darker red on hover */
+}
+
+/* Success Message */
+#successMessage {
+    margin-top: 30px;
+    font-size: 20px; /* Larger font for success */
+    color: #2a9d8f; /* Greenish color for success */
+    font-weight: 700;
+    text-transform: uppercase; /* Uppercase for emphasis */
+}
+
+/* Hidden Class */
+.hidden {
+    display: none;
+}
